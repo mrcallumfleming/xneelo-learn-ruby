@@ -1,0 +1,16 @@
+<h1>My Blog</h1>
+<%= link_to "[+] CREATE", new_blog_post_path %>
+<hr>
+
+<!--computes but no return-->
+<%# 1 %>
+<!--computes and returns-->
+<%#= 2 %>
+
+<div style="background-color: #2E2F30; color: white; padding: 10px; border-radius: 5px">
+  <% @blog_posts.each do |blog_post| %>
+    <div>
+      <h2>[<i><%= blog_post.id %></i>] <%= link_to blog_post.title, blog_post %></h2>
+    </div>
+  <% end %>
+</div>

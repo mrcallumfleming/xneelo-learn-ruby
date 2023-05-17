@@ -1,0 +1,7 @@
+<div style="background-color: #2E2F30; color: white; padding: 10px; border-radius: 5px">
+  <h2><%= @blog_post.title %></h2>
+  <p><%= @blog_post.body %></p>
+  <%= link_to "[H] Home", "/" %>
+  <%= link_to "(E) Edit", "./#{params[:id]}/edit" %>
+</div>
+

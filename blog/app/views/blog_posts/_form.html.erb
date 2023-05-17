@@ -1,0 +1,22 @@
+<%= form_with model: blog_post do |form| %>
+  <% if blog_post.errors.any? %>
+    <div>
+      <% blog_post.errors.full_messages.each do |err_message| %>
+        <div style="color: red;background-color: #2E2F30; padding: 3px; border-radius: 3px; margin-bottom: 3px;">
+          <%= err_message %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <%= form.submit %>
+<% end %>
